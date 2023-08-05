@@ -1,0 +1,210 @@
+* {
+    margin: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 81, 255);
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: JMH;
+    src: url(../../letras/JMH\ Typewriter-Bold.ttf);
+}
+
+header h2 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+header {
+    display: flex;
+    background-color: rgb(73, 151, 246);
+    /* background-color: rgb(73, 151, 246); */
+    /* background-color: rgb(6, 112, 241); */
+    justify-content: left;
+    font-family: sans-serif;
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+
+body {
+    background-color: rgb(148, 196, 255);
+    cursor: url(../../1x/cursor.png),
+        auto;
+}
+
+body h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(9, 74, 136);
+}
+
+/* Imagen del header */
+.menu img {
+    height: 150px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0);
+    float: left;
+    margin: 10px;
+    margin: 20px;
+
+    transition: 0.5s ease-out;
+    border-radius: 100px;
+
+    transition-timing-function: ease;
+}
+
+/* Imagen cambia */
+.menu img:hover {
+
+    /* Accion cuando ponemos el cursor encima del logo */
+    margin-top: -5px;
+    margin-bottom: 5px;
+    /* Pixeles de margen de accion */
+    background-color: rgba(0, 0, 0, 0.643);
+    /* El color del logo */
+    transition-timing-function: cubic-bezier(0.23, .7, 0.320, 2);
+    transform: rotate(20deg);
+    box-shadow: -20px -20px 0 0 rgba(0, 0, 0, 10) inset,
+        10px 10px 0 0 rgba(255, 255, 255, .5) inset;
+}
+
+
+
+/* El menu real */
+.menu2 {
+    list-style: none;
+    padding: 0;
+    background: rgb(47, 117, 201);
+    width: 90%;
+    width: auto;
+    margin: auto;
+    border-radius: 100px;
+    zoom: 2;
+}
+
+.menu2 li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu2 li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu2 li a:hover {
+    color: rgb(47, 117, 201);
+    background: #ffffff;
+    border-radius: 100px;
+    transition: 0.5s, border-radius 0s;
+    cursor: url(../../1x/cursor2.png),
+        auto;
+}
+
+
+.conter {
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.conter h3,p
+{
+font-family:Arial, Helvetica, sans-serif
+}
+.conter p
+{
+    font-size: 30px;
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}

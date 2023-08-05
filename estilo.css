@@ -1,0 +1,190 @@
+* {
+    margin: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 81, 255);
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: JMH;
+    src: url(letras/JMH\ Typewriter-Bold.ttf);
+}
+
+header h2 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+header {
+    display: flex;
+    background-color: rgb(73, 151, 246);
+    /* background-color: rgb(73, 151, 246); */
+    /* background-color: rgb(6, 112, 241); */
+    justify-content: left;
+    font-family: sans-serif;
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+
+body {
+    background-color: rgb(148, 196, 255);
+    cursor: url(1x/cursor.png),
+    auto;
+}
+body h1{
+    font-size: 55px;
+    margin-top: 20px;
+    margin-left: 28%;
+    font-family: JMH;
+}
+
+/* Imagen del header */
+.menu img {
+    height: 150px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0);
+    float: left;
+    margin: 10px;
+    margin: 20px;
+
+    transition: 0.5s ease-out;
+    border-radius: 100px;
+
+    transition-timing-function: ease;
+}
+
+/* Imagen cambia */
+.menu img:hover {
+
+    /* Accion cuando ponemos el cursor encima del logo */
+    margin-top: -5px;
+    margin-bottom: 5px;
+    /* Pixeles de margen de accion */
+    background-color: rgba(0, 0, 0, 0.643);
+    /* El color del logo */
+    transition-timing-function: cubic-bezier(0.23, .7, 0.320, 2);
+    transform: rotate(20deg);
+    box-shadow: -20px -20px 0 0 rgba(0, 0, 0, 10) inset,
+        10px 10px 0 0 rgba(255, 255, 255, .5) inset;
+}
+
+
+
+/* El menu real */
+.menu2 {
+    list-style: none;
+    padding: 0;
+    background: rgb(47, 117, 201);
+    width: 90%;
+    width: auto;
+    margin: auto;
+    border-radius: 100px;
+    zoom: 2;
+}
+
+.menu2 li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.menu2 li {
+    display: inline-block;
+    text-align: center;
+}
+
+.menu2 li a:hover {
+    color: rgb(47, 117, 201);
+    background: #ffffff;
+    border-radius: 100px;
+    transition: 0.5s, border-radius 0s;
+    cursor: url(1x/cursor2.png),
+    auto;
+}
+
+
+
+
+/* El planeta girando */
+.planeta {
+    display: flex;
+}
+
+.esfera {
+    width: 334px;
+    height: 334px;
+    border-radius: 50%;
+    margin-left: 0.6%;
+    margin-top: 20px;
+    box-shadow: -20px -20px 0 0 rgba(0, 0, 0, .15) inset,
+                -40px -40px 0 0 rgba(0, 0, 0, .1) inset,
+                7px 7px 0 0 rgba(255, 255, 255, .5) inset;
+    background: url(1x/mapa.png);
+    background-size: cover;
+    animation: tierra-girando 4.5s infinite linear;
+    transition: 0.5s;
+}
+
+.esfera:hover 
+{
+    transform: rotate(35deg);
+    background: url(1x/Luna.png);
+    background-size: cover;
+    animation: tierra-girando 2s infinite linear;
+    border-radius: 50%;
+}
+
+@keyframes tierra-girando 
+{
+    from 
+    {
+        background-position: left center;
+    }
+
+    to 
+    {
+        background-position: -779px center;
+    }
+}
+
+
+
+/* Letras izquierda del planeta */
+.letras_planeta {
+    height: 334px;
+    width: 77%;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 5px dotted black;
+    border-radius: 30px;
+}
+
+.letras_planeta p {
+    font-size: 45px;
+    padding-left: 5px;
+    font-family: JMH;
+}
+
+.letras_planeta2 {
+    height: 200px;
+    width: 98%;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 5px dotted black;
+    border-radius: 30px;
+}
+
+.letras_planeta2 p {
+    font-size: 45px;
+    padding-left: 5px;
+    font-family: JMH;
+}
+
